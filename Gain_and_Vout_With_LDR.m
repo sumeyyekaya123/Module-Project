@@ -3,10 +3,10 @@ A=5000;
 B=-0.7;
 Lux=0:1:100;
 LDR_R=A.*(Lux).^B;
-R_1=4.7*10^3; %4.7k ohm
-Gain=-LDR_R./R_1;
+R_1=100*10^3; %100k ohm
+Gain=-LDR_R./R_2;
 Vin=9;% 9V
-Vout=Vin.*-LDR_R./R_1;
+Vout=Vin.*-LDR_R./R_2;
 subplot(1,2,1);
 plot(LDR_R,Gain);
 xlabel('LDR''s resistance (ohm)');
